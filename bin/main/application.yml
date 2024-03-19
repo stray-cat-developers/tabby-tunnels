@@ -50,10 +50,12 @@ spring:
             - Path=/v1/open-api/autostay/**
           filters:
           metadata:
-            # swagger를 통해 api 호출시 발급된 token의 allowedServices에 해당 값이 설정되어있어야만 호출할 수 있음, 없으면 401 Unauthorized
+            # Do not provide this document
+            ignore: true
+            # show if token's authorized services contain below key
             permissionKey: river-otter
-            # swagger에 제공할 문서 스펙 가져오는 uri
-            documentationUri: http://localhost:6400/v3/api-docs/Open-API
+            # api spec uri
+            documentUri: http://localhost:6400/v3/api-docs/Open-API
 
 springdoc:
   show-actuator: false
