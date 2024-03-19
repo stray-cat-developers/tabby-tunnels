@@ -1,4 +1,5 @@
 # Tabby Tunnels
+![tabby-tunnels](https://github.com/stray-cat-developers/tabby-tunnels/assets/8306527/8bf24ed9-a7f5-4136-b6a9-033b2d7414cb)
 
 Welcome to Tabby Tunnels, the secure API gateway solution provided by the Stray Cat Developers. Tabby Tunnels is designed to offer developers a robust, secure, and easy-to-use gateway for managing and accessing APIs across various services.
 
@@ -29,8 +30,8 @@ Before running or deploying Tabby Tunnels, make sure you have Gradle installed. 
 
 With JDK 21 and Gradle installed, you can build the project by running:
 
-```
-gradle build
+```sh
+./gradlew build
 ```
 
 This command compiles the project and runs any tests you have defined.
@@ -39,11 +40,16 @@ This command compiles the project and runs any tests you have defined.
 
 To run Tabby Tunnels, execute:
 
-```
-gradle run
+```sh
+./gradlew run
 ```
 
 This will start the Tabby Tunnels gateway on your local machine, making it ready to manage and route API requests.
+
+## Api Specifications
+
+To get api specs via Swagger UI
+goto http://localhost:6200/swagger-ui.html
 
 ## Configuration
 
