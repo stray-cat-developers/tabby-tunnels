@@ -15,7 +15,6 @@ import reactor.core.publisher.Mono
 class TokenAuthenticationFilter(
     private val tokenFinder: TokenFinder
 ) : OrderedFilter(), GlobalFilter {
-    // for gateway
     override fun filter(exchange: ServerWebExchange, chain: GatewayFilterChain): Mono<Void> {
         val request = exchange.request
         val response = exchange.response

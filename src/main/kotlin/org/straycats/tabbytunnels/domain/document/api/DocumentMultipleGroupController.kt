@@ -108,7 +108,9 @@ class DocumentMultipleGroupController(
             val result = route?.run {
                 val url = this.metadata[Constant.Api.MetadataDocumentationUri]
                 val request = HttpGet(url.toString())
-                val response = documentRequester.execute(request).entity
+                val response = documentRequester.execute(request) {
+                    it.entity
+                }
                 val apiSpecs = EntityUtils.toString(response, Charset.defaultCharset())
                 Mono.just(apiSpecs.toByteArray())
             } ?: getOpenApiResourceOrThrow(group).openapiJson(

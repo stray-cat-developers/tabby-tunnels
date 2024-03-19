@@ -47,7 +47,7 @@ spring:
         - id: 'river-otter'
           uri: http://localhost:6400
           predicates:
-            - Path=/v1/open-api/autostay/**
+            - Path=/v1/open-api/**
           filters:
           metadata:
             # do not show this, authorized or not
